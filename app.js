@@ -18,10 +18,6 @@ const redefinirRouter = require('./routes/redefinir');
 
 const app = express();
 
-// View engine
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-
 // Express configs
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
