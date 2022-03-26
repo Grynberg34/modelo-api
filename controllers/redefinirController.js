@@ -1,6 +1,6 @@
 const User = require('../models/User');
 const nodemailer = require ('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
+const smtpTransport = require('nodemailer-smtp-transport');
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
 

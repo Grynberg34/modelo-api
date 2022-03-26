@@ -33,6 +33,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Passport
 app.use(passport.initialize());
 
+// JWT Strategy
+
 let jwtOptions = {};
 jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 jwtOptions.secretOrKey = process.env.JWT_KEY;
@@ -53,6 +55,9 @@ passport.use(new JwtStrategy(jwtOptions, function(jwt_payload, done) {
   });
 
 }));
+
+
+// Google Strategy
 
 passport.use(new GoogleStrategy(
   {
